@@ -6,7 +6,7 @@
 /*   By: ysong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 11:58:02 by ysong             #+#    #+#             */
-/*   Updated: 2020/07/05 12:59:22 by ysong            ###   ########.fr       */
+/*   Updated: 2020/07/05 14:09:04 by ysong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check(int pt_x, int pt_y, int x, int y)
 	}
 	else if (pt_x == 0 && pt_y == y)
 	{
-		ft_putchar('A');
+		ft_putchar('C');
 	}
 	else if (pt_x == x && pt_y == 0)
 	{
@@ -28,7 +28,7 @@ void	check(int pt_x, int pt_y, int x, int y)
 	}
 	else if (pt_x == x && pt_y == y)
 	{
-		ft_putchar('C');
+		ft_putchar('A');
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: ysong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 11:58:02 by ysong             #+#    #+#             */
-/*   Updated: 2020/07/05 14:09:24 by soilee           ###   ########.fr       */
+/*   Updated: 2020/07/05 14:48:06 by soilee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	check_line(int pt_x, int pt_y, int x, int y)
 	}
 }
 
-void		rush(int x, int y)
+void	rush(int x, int y)
 {
 	int pt_x;
 	int pt_y;

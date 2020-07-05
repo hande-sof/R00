@@ -6,13 +6,13 @@
 /*   By: ysong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 10:33:07 by ysong             #+#    #+#             */
-/*   Updated: 2020/07/04 16:29:34 by ysong            ###   ########.fr       */
+/*   Updated: 2020/07/05 10:53:29 by soilee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

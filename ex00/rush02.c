@@ -6,44 +6,44 @@
 /*   By: ysong <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 11:58:02 by ysong             #+#    #+#             */
-/*   Updated: 2020/07/05 14:08:47 by ysong            ###   ########.fr       */
+/*   Updated: 2020/07/05 18:57:12 by soilee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	check(int pt_x, int pt_y, int x, int y)
+void	check_edge(int now_x, int now_y, int x, int y)
 {
-	if (pt_x == 0 && pt_y == 0)
+	if (now_x == 0 && now_y == 0)
 	{
 		ft_putchar('A');
 	}
-	else if (pt_x == 0 && pt_y == y)
+	else if (now_x == 0 && now_y == y)
 	{
 		ft_putchar('C');
 	}
-	else if (pt_x == x && pt_y == 0)
+	else if (now_x == x && now_y == 0)
 	{
 		ft_putchar('A');
 	}
-	else if (pt_x == x && pt_y == y)
+	else if (now_x == x && now_y == y)
 	{
 		ft_putchar('C');
 	}
 }
 
-void	check_line(int pt_x, int pt_y, int x, int y)
+void	print_at(int now_x, int now_y, int x, int y)
 {
-	if ((pt_x == x && pt_y == 0) || (pt_x == x && pt_y == y) ||
-			(pt_x == 0 && pt_y == 0) || (pt_x == 0 && pt_y == y))
+	if ((now_x == x && now_y == 0) || (now_x == x && now_y == y) ||
+			(now_x == 0 && now_y == 0) || (now_x == 0 && now_y == y))
 	{
-		check(pt_x, pt_y, x, y);
+		check_edge(now_x, now_y, x, y);
 	}
-	else if (pt_x == x || pt_x == 0)
+	else if (now_x == x || now_x == 0)
 	{
 		ft_putchar('B');
 	}
-	else if (pt_y == y || pt_y == 0)
+	else if (now_y == y || now_y == 0)
 	{
 		ft_putchar('B');
 	}
@@ -55,21 +55,21 @@ void	check_line(int pt_x, int pt_y, int x, int y)
 
 void	rush(int x, int y)
 {
-	int pt_y;
-	int pt_x;
+	int now_y;
+	int now_x;
 
 	x = x - 1;
 	y = y - 1;
-	pt_y = 0;
-	while (pt_y <= y)
+	now_y = 0;
+	while (now_y <= y)
 	{
-		pt_x = 0;
-		while (pt_x <= x)
+		now_x = 0;
+		while (now_x <= x)
 		{
-			check_line(pt_x, pt_y, x, y);
-			pt_x++;
+			print_at(now_x, now_y, x, y);
+			now_x++;
 		}
 		ft_putchar('\n');
-		pt_y++;
+		now_y++;
 	}
 }
